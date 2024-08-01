@@ -1,6 +1,9 @@
 import React from "react";
 import reduxmiddlewareimg1 from "../../assets/reduxmiddlewareimg1.png";
 import reduxmiddlewareimg2 from "../../assets/reduxmiddlewaresimg2.png";
+import basicsyntaxoffetch from "../../assets/basicsyntaxoffetch.png";
+import basicsyntaxofaxios from "../../assets/basicsyntaxofaxios.png";
+import deffrencebwteenfetchandaxios from "../../assets/diffrencebetweenfetchandaxios.png";
 
 const questions = [
   {
@@ -17,7 +20,7 @@ const questions = [
       },
       {
         id: 3,
-        ans: "Common Middleware used in React Application with Redux are:- <br /> 1. Redux Thunk <br /> 2. Redux Saga <br /> 3. Redux Logger <br /> 4. Redux Promise ",
+        ans: "Common Middleware used in React Application with Redux are:- <br /> 1. Redux Thunk <br /> 2.  Redux Saga  <br /> 3. Redux Logger <br /> 4. Redux Promise ",
       },
       {
         id: 3,
@@ -48,6 +51,67 @@ const questions = [
       {
         id: 9,
         ans: "Middleware concept can also apply to other areas in react application such as:- <br /> 1. Middleware for routing - Custom route handling logic in react router such as authentication guards. <br /> 2. Middlewares for API calls - function that intercepts and modify request or response like axios interceptors.",
+      },
+    ],
+  },
+  {
+    id: 2,
+    question: "What is the Diffrences between fetch and axios",
+    answer: [
+      {
+        id: 1,
+        ans: "Both fetch and axios are use to make HTTP request in JavaScript",
+      },
+      {
+        id: 2,
+        img: basicsyntaxoffetch,
+        ans: "fetch is a built in javacsript function that allows you to make HTTP request.",
+      },
+      {
+        id: 3,
+        ans: "fetch is promise based it uses promises to handle asynchronous operations.",
+      },
+      {
+        id: 3,
+        ans: "<mark>Error Handling </mark> fetch only fails on network error. Non-200 HTTP status code do not reject promises.",
+      },
+      {
+        id: 4,
+        ans: "<mark>Limited Features </mark> - fetch dosen't includes features like request and response interception, request cancellation and timeout handling.",
+      },
+      {
+        id: 5,
+        img: basicsyntaxofaxios,
+        ans: "<mark>AXIOS</mark> - Axios is a popular client library for javascript. it is also promise based and works in both the browser and nodejs environment",
+      },
+      {
+        id: 6,
+        ans: "Axios is also promise based its uses promises to handle asynchronous operations.",
+      },
+      {
+        id: 7,
+        ans: "Axios allows you to intercepts request or response before they are handled.",
+      },
+      {
+        id: 8,
+        ans: "axios supports request cancellation using cancel token.",
+      },
+      {
+        id: 9,
+        ans: "Axios automaticcally transforms json data and supports setting timeouts for request.",
+      },
+      {
+        id: 10,
+        img: deffrencebwteenfetchandaxios,
+        ans: "fetchis a simple way to make HTTP request while axios provides a more feature rich and flexible at the cost of adding and external dependencies.",
+      },
+      {
+        id: 11,
+        ans: "<mark>Use Fetch</mark> - When you want a lightweight solution and you are dealing with simple request. <br /> Its great for small projects or when you dont want to add any extra dependencies.",
+      },
+      {
+        id: 12,
+        ans: "<mark>Use Axios</mark> - When you need advance features like request/response interception, automatic JSON transformation, request cancellation or better error handling. It is more sutaible for larger projects.",
       },
     ],
   },
@@ -85,7 +149,7 @@ const ReactInterviewQuestions = () => {
                           {item.answer.map((i) => (
                             <div key={i.id} className="relative">
                               {i?.img && (
-                                <div>
+                                <div className="dflex">
                                   <img src={i?.img} alt="" />
                                 </div>
                               )}
